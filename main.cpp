@@ -53,7 +53,7 @@ void howLong(int seconds) {
     
     
     // "The   time   is   1   days,   2   hours,   10   minutes,   and   5   seconds."      <<   endl;
-    cout << "The time is " << days << " days, " << hours << " hours, " << minutes << " minutes, and " << leftovers << " seconds." << endl;
+    cout << "Time is " << days << " days, " << hours << " hours, " << minutes << " minutes, and " << leftovers << " seconds." << endl;
     
 }
 
