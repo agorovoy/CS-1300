@@ -14,9 +14,10 @@ using namespace std;
  * Returns int value of population in one year
  */
 int howMany(int population) {
-    int birthAdded = 3.154e7 / 8;
-    int immAdded = 3.154e7 / 33 ;
-    int deathSubtract = 3.154e7 / 12;
+    int secYear = 31536000;
+    int birthAdded = secYear / 8;
+    int immAdded = secYear / 33 ;
+    int deathSubtract = secYear / 12;
     int newPop = population + birthAdded + immAdded - deathSubtract;
     return newPop;
 }
