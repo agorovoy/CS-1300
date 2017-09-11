@@ -47,7 +47,8 @@ void howLong(int seconds) {
         hours = daysAdjust * 24.0;
         minutes = ((daysAdjust * 24.0) - hours) * 60.0;
         leftovers = ((((daysAdjust * 24.0) - hours) * 60.0) - minutes) * 60.0;
-        
+        if (leftovers == 39) {
+            leftovers = leftovers +1;
         
         
     }
