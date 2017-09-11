@@ -47,12 +47,7 @@ void howLong(int seconds) {
         hours = daysAdjust * 24.0;
         minutes = ((daysAdjust * 24.0) - hours) * 60.0;
         leftovers = ((((daysAdjust * 24.0) - hours) * 60.0) - minutes) * 60.0;
-        if (leftovers == 39) {
-            leftovers = leftovers +1;
-        
-        
-    }
-    
+       
     
     // "The   time   is   1   days,   2   hours,   10   minutes,   and   5   seconds."      <<   endl;
     cout << "Time is " << days << " days, " << hours << " hours, " << minutes << " minutes, and " << leftovers << " seconds." << endl;
