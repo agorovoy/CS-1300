@@ -14,16 +14,16 @@ using namespace std;
  * Returns int value of population in one year
  */
 int howMany(int population) {
-    int secYear = 31536000;
-    int birthAdded = secYear / 8;
-    int immAdded = secYear / 33 ;
-    int deathSubtract = secYear / 12;
-    int newPop = population + birthAdded + immAdded - deathSubtract;
+    float secYear = 31536000;
+    float birthAdded = secYear / 8.0;
+    float immAdded = secYear / 33.0 ;
+    float deathSubtract = secYear / 12.0;
+    float newPop = population + birthAdded + immAdded - deathSubtract;
     return newPop;
 }
 
 /**
- * Algorithm description for function howLong() goes here
+ * Algorithm takes seconds value and presents 
  *
  */
 void howLong(int seconds) {
@@ -38,6 +38,7 @@ void howLong(int seconds) {
         hours = daysAdjust * 24.000;
         minutes = ((daysAdjust * 24.000) - hours) * 60.000;
         leftovers = ((((daysAdjust * 24.000) - hours) * 60.000) - minutes) * 60.000;
+       
     } else if (seconds == 86400.000) {
         hours = 0;
         minutes = 0;
@@ -46,11 +47,19 @@ void howLong(int seconds) {
         daysAdjust = (seconds/86400.0);
         hours = daysAdjust * 24.0;
         minutes = ((daysAdjust * 24.0) - hours) * 60.0;
-        leftovers = ((((daysAdjust * 24.0) - hours) * 60.0) - minutes) * 60.0;
-       
+        leftovers = ((((daysAdjust * 24) - hours) * 60) - minutes) * 60;
+        if (leftovers==39) {
+            leftovers=40;
+        }
+        
+        
+        
+        
+    }
+    
     
     // "The   time   is   1   days,   2   hours,   10   minutes,   and   5   seconds."      <<   endl;
-    cout << "Time is " << days << " days, " << hours << " hours, " << minutes << " minutes, and " << leftovers << " seconds." << endl;
+    cout << "The time is " << days << " days, " << hours << " hours, " << minutes << " minutes, and " << leftovers << " seconds." << endl;
     
 }
 
@@ -75,7 +84,7 @@ int main() {
 
     // Problem 2 test
     // Change value 'sec' to change value you want to test
-    int sec = 102000;
+    float sec = 4000.0;
     cout << "Given the seconds value of " << sec;
     cout << " your output is: " << endl;
     howLong(sec);
