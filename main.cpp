@@ -1,5 +1,5 @@
-// Author: CS1300 Fall 2017
-// Recitation: 123 – Favorite TA
+// Author: Andrew Gorovoy
+// Recitation: Thomas Lillis
 //
 // Assignment 2
 
@@ -8,7 +8,7 @@
 using namespace std;
 
 /*
- * Algorithm projects population in on year
+ * Algorithm projects population in one year
  * Adds total births and immigrants during the year
  * Subtracts total deaths in a year
  * Returns int value of population in one year
@@ -23,43 +23,32 @@ int howMany(int population) {
 }
 
 /**
- * Algorithm takes seconds value and presents 
- *
+ * Algorithm takes seconds value and presents in x days, y hours, z minutes, and t seconds
+ * Int variables to represent whole numbers
+ * Used modulo to get seconds left over from previous divsion, and then divided by next value to get hours, minutes
+ * For seconds, no division was necessary becuase modulo gave leftover seconds, and int variable displayed whole number
+ *Returned nothing
  */
 void howLong(int seconds) {
     int days;
     int hours;
     int minutes;
-    int leftovers;
-    float daysAdjust;
-    days = seconds / 86400.0;
-    if (days > 1) {
-        daysAdjust = (seconds/86400.000) - days;
-        hours = daysAdjust * 24.000;
-        minutes = ((daysAdjust * 24.000) - hours) * 60.000;
-        leftovers = ((((daysAdjust * 24.000) - hours) * 60.000) - minutes) * 60.000;
-       
-    } else if (seconds == 86400.000) {
+    float leftovers;
+    if (seconds <86400) {
+    days = seconds/86400;
+    hours = (seconds%86400)/3600;
+    minutes=((seconds%86400)%3600)/60;
+    leftovers = (((seconds%86400)%3600)%60);
+    } else {
+        days = 0;
         hours = 0;
         minutes = 0;
         leftovers = 0;
-    } else {
-        daysAdjust = (seconds/86400.0);
-        hours = daysAdjust * 24.0;
-        minutes = ((daysAdjust * 24.0) - hours) * 60.0;
-        leftovers = ((((daysAdjust * 24) - hours) * 60) - minutes) * 60;
-        if (leftovers==39) {
-            leftovers=40;
-        }
-        
-        
-        
-        
     }
     
     
     // "Time   is   1   days,   2   hours,   10   minutes,   and   5   seconds."      <<   endl;
-    cout << "The time is " << days << " days, " << hours << " hours, " << minutes << " minutes, and " << leftovers << " seconds." << endl;
+    cout << "Time is " << days << " days, " << hours << " hours, " << minutes << " minutes, and " << leftovers << " seconds." << endl;
     
 }
 
