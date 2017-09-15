@@ -34,17 +34,23 @@ void howLong(int seconds) {
     int hours;
     int minutes;
     float leftovers;
-    if (seconds <86400) {
+    if ((seconds != 86400)&&(seconds!=0)) {
     days = seconds/86400;
     hours = (seconds%86400)/3600;
     minutes=((seconds%86400)%3600)/60;
     leftovers = (((seconds%86400)%3600)%60);
+    } else if (seconds == 86400) {
+        days = 1;
+        hours = 0;
+        minutes = 0;
+        leftovers = 0;
     } else {
         days = 0;
         hours = 0;
         minutes = 0;
         leftovers = 0;
     }
+
     
     
     // "Time   is   1   days,   2   hours,   10   minutes,   and   5   seconds."      <<   endl;
@@ -73,7 +79,7 @@ int main() {
 
     // Problem 2 test
     // Change value 'sec' to change value you want to test
-    float sec = 4000.0;
+    float sec = 95678;
     cout << "Given the seconds value of " << sec;
     cout << " your output is: " << endl;
     howLong(sec);
