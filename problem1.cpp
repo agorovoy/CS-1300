@@ -4,7 +4,7 @@ using namespace std;
 
 
 
-void story1()
+void story1(void)
 {
     string temp1;
     string pluralNoun;
@@ -40,7 +40,7 @@ void story1()
 }
 
 
-void story2()
+void story2(void)
 {
     string temp2;
     string name;
@@ -61,7 +61,7 @@ void story2()
     
 }
 
-void story3()
+void story3(void)
 {
     string temp3;
     string firstName;
@@ -103,7 +103,7 @@ void story3()
 
 
 
-void menu() 
+void menu(void) 
 {
    string choice;
     int a=1;
