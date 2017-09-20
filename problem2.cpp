@@ -2,14 +2,14 @@
 #include <math.h>
 using namespace std;
 
-double windChillCalculator(double T, double V) {
-double windChill;
+float windChillCalculator(float T, float V) {
+float windChill;
 windChill = 35.74 + 0.6215*T - 35.75*(pow(V,0.16)) + 0.4275*T*(pow(V,0.16));
 return windChill;
 
 }
 
-void printWindChill(double T, double lowV, double highV, double stepV) {
+void printWindChill(float T, float lowV, float highV, float stepV) {
     int windSpeed = lowV;
     
     while (windSpeed<=highV)
@@ -31,11 +31,11 @@ void printWindChill(double T, double lowV, double highV, double stepV) {
 
 
 int main() {
-double temp;
-double speed;
-double lowSpeed = 5;
-double highSpeed = 8;
-double stepSpeed = 1;
+float temp;
+float speed;
+float lowSpeed = 5;
+float highSpeed = 8;
+float stepSpeed = 1;
 
 cout << "Please type air temperature below and press enter when done.\n";
 cin >> temp;
@@ -56,6 +56,17 @@ printWindChill(temp, lowSpeed, highSpeed, stepSpeed);
 
 
 return 0;
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
