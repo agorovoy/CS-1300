@@ -103,7 +103,7 @@ void story3()
 
 
 
-string menu() 
+void menu() 
 {
    string choice;
     int a=1;
@@ -133,7 +133,7 @@ string menu()
         }
         
      }
-     return choice;
+     
 }
 
 
