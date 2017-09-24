@@ -1,17 +1,27 @@
+//   Author:   Andrew Gorovoy
+//   Recitation:   ECCR 155 –   Thomas Lillis
+//   Assignment   3
+
+
 #include <iostream>
 using namespace std;
 
 
 
-
-void story1(void)
+/*  Take inputs for strings that will be replaced
+    Store inputs in variables
+    Replace place holder strings with user created strings using replace function
+    returns nothing
+*/
+    
+void story1()
 {
     string temp1;
     string pluralNoun;
     string occup;
     string animalName;
     string place;
-    temp1 = "In the book War of the <PLURAL NOUN>, the main character is an anonymous <OCCUPATION> who records the arrival of the <ANIMAL>s in <PLACE>.                          ";
+    temp1 = "In the book War of the <PLURAL NOUN>, the main character is an anonymous <OCCUPATION> who records the arrival of the <ANIMAL>s in <PLACE>. ";
      
     cout << "Enter a plural noun: ";
     cin >> pluralNoun;
@@ -38,9 +48,13 @@ void story1(void)
     cout<< temp1 << endl;
     
 }
+/*  Take inputs for strings that will be replaced
+    Store inputs in variables
+    Replace place holder strings with user created strings using replace function
+    returns nothing
+*/
 
-
-void story2(void)
+void story2()
 {
     string temp2;
     string name;
@@ -60,8 +74,13 @@ void story2(void)
 
     
 }
+/*  Take inputs for strings that will be replaced
+    Store inputs in variables
+    Replace place holder strings with user created strings using replace function
+    returns nothing
+*/
 
-void story3(void)
+void story3()
 {
     string temp3;
     string firstName;
@@ -84,26 +103,17 @@ void story3(void)
     cout << temp3 << endl;
     
     
-}
-
-/*int posFind(string str) 
-{
-    int i;
-    i=0;
-    while (i<str.length() && str[i]!="<")
-    {
-        ++i;
-        return i;
-    }
-    
-    
-    
-}
+/*
+Begin while loop for game
+Take in pit value from user and store as string
+If valid choice call necessary function or end program by satisfying loop ending program
+If not valid choice, display this message to user and retake input from user
+returns nothing
 */
 
 
 
-void menu(void) 
+void menu() 
 {
    string choice;
     int a=1;
@@ -148,7 +158,7 @@ void menu(void)
 
 
 
-
+// call menu function to play game. Everything else runs through functions
 
 int main()  
 {
